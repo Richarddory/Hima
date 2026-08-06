@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://PELDA-DOMAIN/sitemap.xml
+Sitemap: https://himapets.com/sitemap.xml

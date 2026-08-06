@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://PELDA-DOMAIN/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://PELDA-DOMAIN/impresszum.html</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://PELDA-DOMAIN/aszf.html</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://PELDA-DOMAIN/adatkezeles.html</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://PELDA-DOMAIN/elallas.html</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://PELDA-DOMAIN/szallitas-fizetes.html</loc><changefreq>weekly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://PELDA-DOMAIN/imprint.html</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://PELDA-DOMAIN/terms.html</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://PELDA-DOMAIN/privacy.html</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://PELDA-DOMAIN/withdrawal.html</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://PELDA-DOMAIN/shipping-payment.html</loc><changefreq>weekly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://himapets.com/</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://himapets.com/impresszum.html</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://himapets.com/aszf.html</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://himapets.com/adatkezeles.html</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://himapets.com/elallas.html</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://himapets.com/szallitas-fizetes.html</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://himapets.com/imprint.html</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://himapets.com/terms.html</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://himapets.com/privacy.html</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://himapets.com/withdrawal.html</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://himapets.com/shipping-payment.html</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.4</priority></url>
 </urlset>
