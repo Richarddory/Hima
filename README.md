@@ -83,7 +83,7 @@ Ezt a `hima-dashboard/src/stripe.js` `SHIPPING` blokkjában tudod átírni.
 | Fájl | Mi ez |
 |---|---|
 | `index.html` | a bolt – termékek, szövegek, stílus, kosár, ajánló, mérőkód |
-| `images/hero.jpg` | **a nyitókép** – ezt cseréld a saját, nagy felbontású fotódra |
+| `hero.jpg` | **a nyitókép** – ezt cseréld a saját, nagy felbontású fotódra |
 | `images/` | termékképek, logó, favicon, megosztási kép (`og-cover.jpg`) |
 | `impresszum.html` · `aszf.html` · `adatkezeles.html` · `elallas.html` · `szallitas-fizetes.html` | magyar jogi oldalak |
 | `imprint.html` · `terms.html` · `privacy.html` · `withdrawal.html` · `shipping-payment.html` | angol jogi oldalak |
@@ -106,6 +106,12 @@ Két helyen kell ugyanazt átírni:
 2. `hima-dashboard/src/catalog.js` (ebből számol a fizetés), majd `npx wrangler deploy`.
 
 Ha a kettő eltér, a vásárló a régi árat látja, de az újat fizeti – vagy fordítva.
+
+## Megjegyzés a képek helyéről
+
+A képek jelenleg a repó **gyökerében** vannak (nem `images/` mappában), ezért az oldalak is
+onnan hivatkozzák őket. Ha később rendet raksz és mappába kerülnek, a HTML-ekben a
+kép-hivatkozások elé vissza kell írni az `images/` előtagot.
 
 ## Nyitókép (hero)
 
