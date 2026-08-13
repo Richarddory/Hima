@@ -49,6 +49,22 @@ a `wrangler.toml`-ban ez a cím szerepeljen a `SITE_URL`-ben, különben a Strip
 
 ---
 
+## ⚠️ Rólunk szekció – a telefonszám még helyőrző
+
+Az `index.html`-ben, a `<section class="about" id="rolunk">` blokk alján:
+
+```html
+<!-- TELEFONSZÁM: írd át a valódira, vagy töröld ezt az egy sort -->
+<a href="tel:+36000000000" class="about-tel">+36 XX XXX XXXX</a>
+```
+
+**Vagy írd át a saját számodra** (a `tel:` linkben szóköz nélkül, országhívóval: `tel:+3630...`),
+**vagy töröld ezt a két sort** – a szekció enélkül is rendben néz ki, marad az e-mail.
+Az ügyfélfogadási idő (`ab_hours`) az `I18N` szótárban van, magyarul és angolul is.
+
+A szekció szövegei mind az `I18N`-ben vannak, `ab_` előtaggal (`ab_lead`, `ab_c1_t`, `ab_c1_d` …),
+így a nyelvváltás automatikusan működik. A menübe is bekerült egy „Rólunk" pont (`#rolunk`).
+
 ## Kosárba épített ajánló (upsell)
 
 Ha van valami a kosárban, alatta megjelenik 1-2 kapcsolódó termék **kedvezménnyel** – például
@@ -83,7 +99,7 @@ Ezt a `hima-dashboard/src/stripe.js` `SHIPPING` blokkjában tudod átírni.
 | Fájl | Mi ez |
 |---|---|
 | `index.html` | a bolt – termékek, szövegek, stílus, kosár, ajánló, mérőkód |
-| `hero.jpg` | **a nyitókép** – ezt cseréld a saját, nagy felbontású fotódra |
+| `images/hero.jpg` | **a nyitókép** – ezt cseréld a saját, nagy felbontású fotódra |
 | `images/` | termékképek, logó, favicon, megosztási kép (`og-cover.jpg`) |
 | `impresszum.html` · `aszf.html` · `adatkezeles.html` · `elallas.html` · `szallitas-fizetes.html` | magyar jogi oldalak |
 | `imprint.html` · `terms.html` · `privacy.html` · `withdrawal.html` · `shipping-payment.html` | angol jogi oldalak |
@@ -107,23 +123,22 @@ Két helyen kell ugyanazt átírni:
 
 Ha a kettő eltér, a vásárló a régi árat látja, de az újat fizeti – vagy fordítva.
 
-## Megjegyzés a képek helyéről
-
-A képek jelenleg a repó **gyökerében** vannak (nem `images/` mappában), ezért az oldalak is
-onnan hivatkozzák őket. Ha később rendet raksz és mappába kerülnek, a HTML-ekben a
-kép-hivatkozások elé vissza kell írni az `images/` előtagot.
-
 ## Nyitókép (hero)
 
 A nyitóképet az `images/hero.jpg` fájl adja – **csak ezt kell kicserélni**, a szöveg és a
-színátmenet automatikusan igazodik. Ajánlott méret: legalább 2000 × 1400 képpont, fekvő
-vagy közel négyzetes, a lényeg a kép jobb-középső részén (a bal oldalra kerül a szöveg).
+színátmenet automatikusan igazodik. Ajánlott méret: legalább 2000 × 1400 képpont, fekvő,
+a lényeg a kép jobb-középső részén (a bal oldalra kerül a szöveg), a bal széle sötét.
 
-A jelenlegi fájl egy képernyőkép kivágása, ezért **lágy a részletessége, és jogilag sem a tiéd** –
-éles indulás előtt mindenképp cseréld le saját vagy megvásárolt fotóra.
+A jelenlegi fájl a saját generált látványtervedből van kivágva (1066 × 694). Ez a legtöbb
+képernyőn rendben van; ha nagy, retina monitoron is tűéles legyen, generáltasd újra a jelenetet
+**szöveg nélkül, 2000 képpont szélesen**, és cseréld le vele ezt a fájlt.
 
-A címsor szótári tételként van szedve: a szó nagyban, alatta a kiejtés `[ˈhi·mɒ]` és a szófaj
-apró betűvel, majd a számozott jelentés. Ezt az `index.html` hero szakaszában találod.
+A hero két rétegből áll: egy sötét alap (`#1B0C09`) és a fotó a jobb 74%-on, közöttük lágy
+színátmenet (`.hero::after`). Ha világosabb vagy sötétebb alapot akarsz, ezt a három helyen
+írd át: `.hero{background}`, `.hero::after` és a 900/700 képpontos töréspontok.
+
+A hero alatti három előnyblokk (`<section class="trust">`) szövegei az `I18N` szótárban vannak,
+`tr1_t … tr3_d` kulcsokkal – magyarul és angolul is.
 
 ## Jogi és adatvédelmi állapot
 
