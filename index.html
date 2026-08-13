@@ -7,7 +7,7 @@
   <!-- ====== A SAJÁT KISZOLGÁLÓD CÍME (kosár, fizetés, statisztika) ======
        Írd ide a Cloudflare Worker címét, pl. https://hima-analytics.valami.workers.dev
        Amíg helyőrző van benne, a bolt böngészhető, de fizetni nem lehet. -->
-  <script>window.HIMA_API = 'IDE_JON_A_WORKER_CIME';</script>
+  <script>window.HIMA_API = 'https://hima-analytics.himapets.workers.dev';</script>
   <title>Hima | okos kütyük cicáknak és kutyáknak</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <meta name="description" content="Okos kisállatkellékek cicáknak és kutyáknak: öntisztító macska-WC, okos etetők, itatókutak, karomápolás. Az árak tartalmazzák az áfát (HU: Ft, EN: €)." />
@@ -1835,10 +1835,13 @@
     };
     if (window.HimaTrack) { payload.sid = window.HimaTrack.sid; payload.src = window.HimaTrack.src; payload.med = window.HimaTrack.med; payload.camp = window.HimaTrack.camp; window.HimaTrack.push('begin_checkout', {}, true); }
     fetch(API + '/checkout', { method:'POST', headers:{'content-type':'application/json'}, body:JSON.stringify(payload) })
-      .then(function(r){ return r.json(); })
+      .then(function(r){ return r.json().then(function(j){ j.__status = r.status; return j; }); })
       .then(function(res){
         if (res && res.url) { location.href = res.url; return; }
-        btn.disabled = false; err.innerHTML = '<p class="cart-err">' + esc(res && res.error || d.err) + '</p>';
+        btn.disabled = false;
+        /* 503 = a fizetés még nincs bekapcsolva (nincs Stripe kulcs) – ilyenkor udvarias üzenet, nem hiba */
+        var msg = (res && res.__status === 503) ? d.soon : esc(res && res.error || d.err);
+        err.innerHTML = '<p class="cart-err">' + msg + '</p>';
       })
       .catch(function(){ btn.disabled = false; err.innerHTML = '<p class="cart-err">' + d.err + '</p>'; });
   }
