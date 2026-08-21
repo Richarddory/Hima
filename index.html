@@ -7,7 +7,10 @@
   <!-- ====== A SAJÁT KISZOLGÁLÓD CÍME (kosár, fizetés, statisztika) ======
        Írd ide a Cloudflare Worker címét, pl. https://hima-analytics.valami.workers.dev
        Amíg helyőrző van benne, a bolt böngészhető, de fizetni nem lehet. -->
-  <script>window.HIMA_API = 'https://hima-analytics.himapets.workers.dev';</script>
+  <script>window.HIMA_API = 'https://hima-analytics.himapets.workers.dev';
+  /* Google Ads konverzió: ha elindítod a hirdetést, ide jön a két azonosító.
+     id: 'AW-1234567890', label: 'AbCdEfGh12' – a Google Ads adja meg. Üresen hagyva nem fut semmi. */
+  window.HIMA_ADS = { id: '', label: '' };</script>
   <title>Hima | okos kütyük cicáknak és kutyáknak</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <meta name="description" content="Okos kisállatkellékek cicáknak és kutyáknak: öntisztító macska-WC, okos etetők, itatókutak, karomápolás. Az árak tartalmazzák az áfát (HU: Ft, EN: €)." />
@@ -259,7 +262,7 @@
     "item": {
      "@type": "Product",
      "name": "6 literes okos etető hangüzenettel",
-     "description": "Felveszed a saját hangodat, és etetéskor az szólal meg, a kedvenced pedig úgy rohan a táljához, mintha épp hazaértél volna. Napi tíz adagig időzíthető, adagonként pontosan kimért mennyiséggel, 6 literes tartállyal. A tartály és a tál kivehető, mosható, BPA-mentes, a nedvszívó tasak pedig szárazon tartja a tápot. Hálózatról és elemről is megy, tehát egy áramszünet nem borítja fel a vacsorát. 32×21×19 cm, EU-dugó.",
+     "description": "Felveszed a saját hangodat, és etetéskor az szólal meg, a kedvenced pedig úgy rohan a táljához, mintha épp hazaértél volna. Napi tíz adagig időzíthető, adagonként pontosan kimért mennyiséggel, 6 literes tartállyal. A tartály és a tál kivehető, mosható, BPA-mentes, a négy nedvszívó tasak pedig szárazon tartja a tápot. Hálózatról és elemről is megy, tehát egy áramszünet nem borítja fel a vacsorát. 32×21×19 cm, EU-dugó.",
      "sku": "fg-feeder-6l",
      "image": [
       "https://himapets.com/fg-feeder-6l-all-1.jpg",
@@ -786,8 +789,7 @@
       <div class="wrap">
         <div class="shop-head">
           <span class="kicker" data-i18n="shop_kicker">A kínálat</span>
-          <h2 data-i18n="shop_h2">Okos kütyük cicáknak és kutyáknak</h2>
-          <p data-i18n="shop_p">Böngéssz kategóriák szerint: öntisztító macska-WC, itatás, okos etetés és karomápolás.</p>
+          <h2 data-i18n="shop_h2">Okos kütyük okos cicáknak és kutyáknak</h2>
         </div>
         <div class="cur-mobile" role="group" aria-label="Pénznem">
           <span data-i18n="cur_label">Pénznem</span>
@@ -816,12 +818,12 @@
           <div class="about-card">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 10.5 12 4l8.5 6.5"/><path d="M5.8 12.4V19h12.4v-6.6"/><path d="M10 19v-4h4v4"/></svg>
             <b data-i18n="ab_c1_t">Itthon vagyunk</b>
-            <span data-i18n="ab_c1_d">Budapesti kis csapat. Aki a boltot csinálja, az válaszol az e-mailekre, ugyanaz a néhány ember, végig.</span>
+            <span data-i18n="ab_c1_d">Budapesti kis csapat. Aki a boltot csinálja, az válaszol az e-mailekre, ugyanaz a néhány ember.</span>
           </div>
           <div class="about-card">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.2 4.6h5.6l1 2.6 2.7-.6 2.1 3.6-1.9 2 1.9 2-2.1 3.6-2.7-.6-1 2.6H9.2l-1-2.6-2.7.6-2.1-3.6 1.9-2-1.9-2 2.1-3.6 2.7.6z"/><circle cx="12" cy="12.2" r="2.6"/></svg>
-            <b data-i18n="ab_c2_t">Kézzel válogatva</b>
-            <span data-i18n="ab_c2_d">Nem egy katalógusból pakoltunk össze boltot. Minden darabot végignéztünk, és csak az maradt, amit magunknak is megvennénk.</span>
+            <b data-i18n="ab_c2_t">Amit beveszünk, azt ismerjük</b>
+            <span data-i18n="ab_c2_d">Minden darabot a kezünkben forgattunk meg, mielőtt felkerült ide. Ami nem győzött meg, az ki sem került a boltba.</span>
           </div>
           <div class="about-card">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v11H13l-4 3.2V16.5H4z"/><path d="M8.4 11h.01M12 11h.01M15.6 11h.01"/></svg>
@@ -983,10 +985,9 @@
       {id:'fg-feeder-6l', cat:'feeding', badge:'badge_popular', eur:'89.90', usd:'103.99', huf:32990,
         prices:{key:{eur:'89.90', usd:'103.99',huf:32990}, app:{eur:'99.90', usd:'115.99',huf:35990}, cam:{eur:'129.90', usd:'149.99',huf:46990}},
         imgs:{'all':['fg-feeder-6l-all-1.jpg','fg-feeder-6l-all-2.jpg','fg-feeder-6l-all-3.jpg','fg-feeder-6l-all-4.jpg','fg-feeder-6l-all-5.jpg','fg-feeder-6l-all-6.jpg','fg-feeder-6l-all-7.jpg']},
-        opt1:{hu:'Csomag',en:'Set',vals:[{k:'set1',hu:'3 nedvesedésgátló tasakkal',en:'With 3 desiccant packs'},{k:'set2',hu:'4 nedvesedésgátló tasakkal',en:'With 4 desiccant packs'}]},
         opt2:{hu:'Kivitel',en:'Version',vals:[{k:'key',hu:'Gombos, WiFi nélkül',en:'Key version, no WiFi'},{k:'app',hu:'Wi-Fi + app vezérlés',en:'Wi-Fi + app control'},{k:'cam',hu:'Wi-Fi + kamera',en:'Wi-Fi + camera'}]},
         hu:{name:'6 literes okos etető hangüzenettel', desc:'Felveszed a saját hangodat, és etetéskor az szólal meg, a kedvenced pedig úgy rohan a táljához, mintha épp hazaértél volna. Napi tíz adagig időzíthető, adagonként pontosan kimért mennyiséggel, 6 literes tartállyal. A tartály és a tál kivehető, mosható, BPA-mentes, a nedvszívó tasak pedig szárazon tartja a tápot. Hálózatról és elemről is megy, tehát egy áramszünet nem borítja fel a vacsorát. 32×21×19 cm, EU-dugó.'},
-        en:{name:'6 L Smart Feeder with Voice Recorder', desc:'Record your own voice and it plays at feeding time, and your pet comes running as if you had just walked in. Up to ten precisely measured meals a day from a 6-litre hopper. Tank and bowl come out for washing, BPA-free, and a desiccant bag keeps the food dry. Runs on mains or batteries, so a power cut never skips dinner. 32×21×19 cm, EU plug.'}},
+        en:{name:'6 L Smart Feeder with Voice Recorder', desc:'Record your own voice and it plays at feeding time, and your pet comes running as if you had just walked in. Up to ten precisely measured meals a day from a 6-litre hopper. Tank and bowl come out for washing, BPA-free, and the four desiccant bags keep the food dry. Runs on mains or batteries, so a power cut never skips dinner. 32×21×19 cm, EU plug.'}},
       {id:'fg-bowl-antiant', cat:'feeding', eur:'12.90', usd:'14.99', huf:4990,
         prices:{single:{eur:'12.90', usd:'14.99',huf:4990}, steel:{eur:'15.90', usd:'18.99',huf:6190}},
         imgs:{'narancs':['fg-bowl-antiant-narancs-acel.jpg'],
@@ -1023,9 +1024,9 @@
         ab_pos:"főnév",
         ab_lead:"Védett hely, ahol semmiért nem kell megküzdeni. Egy állat akkor van igazán otthon, ha nem kell figyelnie, sem a tálra, sem az ajtóra, sem a többiekre. Ez a nyugalom apró, jól megcsinált dolgokon múlik: friss vízen, pontos adagon, tiszta almon. A Hima ezekért van.",
         ab_c1_t:"Itthon vagyunk",
-        ab_c1_d:"Budapesti kis csapat. Aki a boltot csinálja, az válaszol az e-mailekre, ugyanaz a néhány ember, végig.",
-        ab_c2_t:"Kézzel válogatva",
-        ab_c2_d:"Nem egy katalógusból pakoltunk össze boltot. Minden darabot végignéztünk, és csak az maradt, amit magunknak is megvennénk.",
+        ab_c1_d:"Budapesti kis csapat. Aki a boltot csinálja, az válaszol az e-mailekre, ugyanaz a néhány ember.",
+        ab_c2_t:"Amit beveszünk, azt ismerjük",
+        ab_c2_d:"Minden darabot a kezünkben forgattunk meg, mielőtt felkerült ide. Ami nem győzött meg, az ki sem került a boltba.",
         ab_c3_t:"Ha elakadsz, szólj",
         ab_c3_d:"Nem call-center vesz fel, hanem mi. Írj bármikor: rendelés, szállítás, csere, vagy csak egy kérdés, hogy melyik való a te kedvencednek.",
         ab_c4_t:"Ha mégsem jött be",
@@ -1044,8 +1045,7 @@
         tr1_t:"Prémium minőség",tr1_d:"Csak gondosan válogatott, megbízható termékek.",
         tr2_t:"Okos megoldások",tr2_d:"Innovatív technológia a kényelmesebb mindennapokért.",
         tr3_t:"Gondoskodás",tr3_d:"A kis kedvencek jóléte az első.",
-        shop_kicker:"A kínálat",shop_h2:"Okos kütyük cicáknak és kutyáknak",
-        shop_p:"Böngéssz kategóriák szerint: öntisztító macska-WC, itatás, okos etetés és karomápolás.",
+        shop_kicker:"A kínálat",shop_h2:"Okos kütyük okos cicáknak és kutyáknak",
         price_disclaimer:"* Az árak tartalmazzák az áfát. A szállítási díj a pénztárnál látszik.",
         gpsr_t:"Termékbiztonság (GPSR)",
         gpsr_p:"EU-felelős / importőr: Keystone Dynamics Kft., 1136 Budapest, Pannónia utca 19. 1. em. 4., info@himapets.com. A gyártói adatok és a biztonsági tájékoztató a termékhez mellékelve, illetve a termékleírásban találhatók. Részletek az ÁSZF-ben.",
@@ -1066,9 +1066,9 @@
         ab_pos:"noun",
         ab_lead:"A sheltered place, where nothing has to be fought for. An animal is truly at home when it no longer has to keep watch, not on the bowl, not on the door, not on the others. That kind of calm rests on small, well-made things: fresh water, the right portion, clean litter. This is what Hima is for.",
         ab_c1_t:"We\u2019re right here",
-        ab_c1_d:"A small team in Budapest. The people who run the shop are the ones who answer your e-mail, the same few of us, all the way.",
-        ab_c2_t:"Hand-picked, not bulk-listed",
-        ab_c2_d:"We didn’t assemble a shop out of a catalogue. We went through every item and kept only what we’d buy for ourselves.",
+        ab_c1_d:"A small team in Budapest. The people who run the shop are the ones who answer your e-mail.",
+        ab_c2_t:"We know what we sell",
+        ab_c2_d:"We have handled every item ourselves before it went up here. Whatever didn’t convince us never made it into the shop.",
         ab_c3_t:"If you get stuck, tell us",
         ab_c3_d:"No call centre picks up, we do. Write any time: orders, delivery, swaps, or just which one suits your pet.",
         ab_c4_t:"If it isn\u2019t right",
@@ -1087,8 +1087,7 @@
         tr1_t:"Premium quality",tr1_d:"Only carefully selected, dependable products.",
         tr2_t:"Smart solutions",tr2_d:"Innovative technology for easier everyday care.",
         tr3_t:"Real care",tr3_d:"Your pet's wellbeing comes first.",
-        shop_kicker:"The goods",shop_h2:"Smart gear for cats and dogs",
-        shop_p:"Browse by category: self-cleaning litter, drinking, smart feeding and nail care.",
+        shop_kicker:"The goods",shop_h2:"Smart gear for smart cats and dogs",
         price_disclaimer:"* Prices include VAT. Shipping is shown at checkout.",
         gpsr_t:"Product safety (GPSR)",
         gpsr_p:"EU responsible person / importer: Keystone Dynamics Kft., 1136 Budapest, Pannónia utca 19. 1. em. 4., info@himapets.com. Manufacturer information and safety notices are included with the product or stated in the description. See our Terms.",
@@ -1845,6 +1844,33 @@
       .catch(function(){ btn.disabled = false; err.innerHTML = '<p class="cart-err">' + d.err + '</p>'; });
   }
 
+
+  /* A rendelés végösszegét a workertől kérjük el (a böngészőben tárolt kosár ilyenkor
+     már üres, és amúgy sem lenne hiteles forrás). A Stripe webhookja pár másodperccel
+     a visszatérés után írja be a rendelést, ezért néhányszor újrapróbáljuk. */
+  function sendPurchase(sid){
+    var API = (window.HIMA_API || '');
+    if (!/^https:\/\//.test(API) || !sid) return;
+    var tries = 0;
+    (function pull(){
+      tries++;
+      fetch(API + '/order?s=' + encodeURIComponent(sid), { mode:'cors' })
+        .then(function(r){ return r.json(); })
+        .then(function(o){
+          if (!o || !o.ok) { if (tries < 5) setTimeout(pull, 2000); return; }
+          var cur = String(o.currency || 'huf').toUpperCase();
+          if (typeof gtag === 'function') {
+            gtag('event', 'purchase', { transaction_id:o.id, value:o.total, currency:cur });
+            var A = window.HIMA_ADS;
+            if (A && A.id && A.label) {
+              gtag('event', 'conversion', { send_to:A.id + '/' + A.label, value:o.total, currency:cur, transaction_id:o.id });
+            }
+          }
+        })
+        .catch(function(){ if (tries < 5) setTimeout(pull, 2000); });
+    })();
+  }
+
   /* --- visszatérés a fizetésből --- */
   var q = new URLSearchParams(location.search);
   if (q.get('fizetve') === '1') {
@@ -1857,6 +1883,7 @@
       ov.classList.add('open');
     }
     if (window.HimaTrack) window.HimaTrack.push('purchase', { meta:'stripe' }, true);
+    sendPurchase(q.get('s'));
     history.replaceState({}, '', location.pathname);
   } else if (q.get('megszakitva') === '1') {
     history.replaceState({}, '', location.pathname);
