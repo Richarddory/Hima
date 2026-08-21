@@ -471,9 +471,9 @@
     @media (max-width:900px){ .def{max-width:none} }
 
     .trust{background:#F2E9E1;border-bottom:1px solid rgba(60,30,20,.09)}
-    .trust-grid{display:flex;justify-content:center;align-items:stretch;flex-wrap:wrap;gap:0;padding:34px 0}
-    .trust-item{display:flex;align-items:center;gap:15px;width:445px;padding:2px 34px;border-left:1px solid rgba(60,30,20,.13)}
-    .trust-item:first-child{border-left:0}
+    .trust-grid{display:flex;align-items:stretch;gap:0;padding:34px 0}
+    .trust-item{display:flex;align-items:center;gap:15px;flex:0 0 50%;min-width:0;padding:2px 34px;border-left:1px solid rgba(60,30,20,.13)}
+    .trust-item:first-child{border-left:0;padding-left:0}
     .trust-item svg{width:30px;height:30px;flex:0 0 auto;stroke:#3B1F16;stroke-width:1.5;fill:none;margin-top:1px}
     .trust-item b{display:block;font-weight:700;font-size:15px;color:#2E1710;margin-bottom:5px;letter-spacing:.005em}
     .trust-item span{display:block;font-size:13.5px;line-height:1.5;color:rgba(46,23,16,.68)}
@@ -638,7 +638,7 @@
       .cart-btn{padding:7px 12px;font-size:13.5px;gap:7px}
       .hero::after{background:linear-gradient(90deg, #1B0C09 0%, rgba(27,12,9,.93) 34%, rgba(27,12,9,.58) 54%, rgba(27,12,9,.20) 74%, rgba(27,12,9,.06) 100%)}
       .trust-grid{padding:28px 0}
-      .trust-item{width:50%;padding:2px 24px}
+      .trust-item{padding:2px 22px}
       .foot-top{grid-template-columns:1fr 1fr}
       .card.featured{flex-direction:column}
       .card.featured .card-img{width:100%;border-right:none;border-bottom:2px solid var(--line);min-height:0;aspect-ratio:16/10}
@@ -680,7 +680,7 @@
       .cta-row{margin-top:24px}
       .cta-row .btn{width:100%;justify-content:center;padding:16px 24px}
       .trust-grid{flex-direction:column;align-items:stretch;gap:20px;padding:24px 0}
-      .trust-item{border-left:0;border-top:1px solid rgba(60,30,20,.13);padding:16px 0 0;width:100%}
+      .trust-item{flex:0 0 auto;border-left:0;border-top:1px solid rgba(60,30,20,.13);padding:16px 0 0}
       .trust-item:first-child{border-top:0;padding-top:2px}
       .shop{padding:30px 0 40px}
       .cat-section{scroll-margin-top:80px}
